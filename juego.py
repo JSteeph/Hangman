@@ -46,28 +46,6 @@ def read():
 
 
 
-
-
-
-
-
-
-
-
-        #my_dict = [my_dict for my_dict in my_dict.items() if value == int(random)]
-        
-
-        # my_dict = {i : my_dict.get(random) for i in range(1,int(len(my_dict))) if i == int(random)}
-        #print(my_dict.get(1,"No se encuentra"))
-   
-
-
-
-
-
-
-
-
 def run():
     read()
 
