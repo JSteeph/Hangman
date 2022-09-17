@@ -1,3 +1,4 @@
+from queue import Empty
 from random import randint
 
 
@@ -33,11 +34,12 @@ def read():
 
     letra = str(input("Ingresa una letra/vocal:"))
     
-    for i in secretword:
-        if(i == letra):
-            letra == letra
+    for secretword in secretword:
+        if letra == secretword:
+          print(secretword)
         
-        print(letra)
+       
+        
 
 
 
