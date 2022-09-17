@@ -32,11 +32,14 @@ def read():
                 print(secretword)
 
 
-    letra = str(input("Ingresa una letra/vocal:"))
+    for i in range(1,15):
+        letra = str(input("Ingresa una letra/vocal:"))
     
-    for secretword in secretword:
-        if letra == secretword:
-          print(secretword)
+        for secretword in secretword:
+            if letra == secretword:
+                print(secretword)
+            else:
+                print("-")
         
        
         
