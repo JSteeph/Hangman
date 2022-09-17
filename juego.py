@@ -14,7 +14,18 @@ def normalize(s):
         s = s.replace(a, b).replace(a.upper(), b.upper())
     return s
 
+def word(letra,secretword):
+    
+           
+            
+        for secretword in secretword:
+            secretword = secretword
+            if letra == secretword:
+                print(secretword)
+            else:
+                print("-")
 
+        
 
 def read():
 
@@ -31,15 +42,10 @@ def read():
                 secretword = normalize(secretword)
                 print(secretword)
 
-
-    for i in range(1,15):
-        letra = str(input("Ingresa una letra/vocal:"))
     
-        for secretword in secretword:
-            if letra == secretword:
-                print(secretword)
-            else:
-                print("-")
+    for i in range(0,5):
+        word(str(input("Ingresa una letra/vocal:")),secretword)
+    
         
        
         
