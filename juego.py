@@ -5,6 +5,18 @@ def choose():
     pass
     
 
+def normalize(s):
+    replacements = (
+        ("á", "a"),
+        ("é", "e"),
+        ("í", "i"),
+        ("ó", "o"),
+        ("ú", "u"),
+    )
+    for a, b in replacements:
+        s = s.replace(a, b).replace(a.upper(), b.upper())
+    return s
+
 
 
 def read():
@@ -20,8 +32,9 @@ def read():
             if i == int(random):
                 secretword = j
                 print(i,j)
+                secretword = normalize(secretword)
                 print(secretword)
-                
+                                
 
 
 
