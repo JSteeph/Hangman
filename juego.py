@@ -1,10 +1,6 @@
 from random import randint
 
 
-def choose():
-    pass
-    
-
 def normalize(s):
     replacements = (
         ("á", "a"),
@@ -20,21 +16,36 @@ def normalize(s):
 
 
 def read():
-    
+
     with open("./archivos/data.txt","r", encoding="utf-8") as f:
 
         my_dict = {i for i in enumerate(f, start=1)}
 
         random = randint(0,int(len(my_dict)))
-        print(random)
+        
 
         for i,j in my_dict:
             if i == int(random):
                 secretword = j
-                print(i,j)
                 secretword = normalize(secretword)
                 print(secretword)
-                                
+
+
+    letra = str(input("Ingresa una letra/vocal:"))
+    
+    for i in secretword:
+        if(i == letra):
+            letra == letra
+        
+        print(letra)
+
+
+
+
+
+
+
+
 
 
 
