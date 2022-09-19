@@ -15,17 +15,28 @@ def normalize(s):
     return s
 
 def word(letra,secretword):
-    
-           
-            
-        for secretword in secretword:
-            secretword = secretword
-            if letra == secretword:
-                print(secretword)
-            else:
-                print("-")
+             
+        secretword = [secretword for letra in secretword if letra == secretword]
 
-        
+        print(secretword)
+
+def procesar_letra(letra, palabra, tablero, letras_erroneas):
+    if letra in palabra:
+        print('¡Genial! Has acertado una letra.')
+        hiddenword(letra, palabra, tablero)
+    else:
+        print('¡Oh! Has fallado.')
+        letras_erroneas.append(letra)
+
+
+def hiddenword(letra, palabra, tablero):
+    for indice, letra_palabra in enumerate(palabra):
+        if letra == letra_palabra:
+            tablero[indice] = letra
+
+   
+
+
 
 def read():
 
@@ -42,11 +53,15 @@ def read():
                 secretword = normalize(secretword)
                 print(secretword)
 
+                letra = str(input("Ingresa una letra/vocal:"))
+                word(letra,secretword)
+                
+              
+ 
+
     
-    for i in range(0,5):
-        word(str(input("Ingresa una letra/vocal:")),secretword)
+
     
-        
        
         
 
