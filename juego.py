@@ -1,5 +1,7 @@
 from queue import Empty
 from random import randint
+from wsgiref.validate import validator
+
 
 
 def normalize(s):
@@ -15,27 +17,23 @@ def normalize(s):
     return s
 
 def word(letra,secretword):
-             
-        secretword = [secretword for letra in secretword if letra == secretword]
+        palabra = []
+        secretword = [letra for letra in secretword ]
+        words = list(filter(lambda letra: letra == letra, secretword))
+        words.remove("\n")
+        
+        for indice, valor in enumerate(secretword):
+            
+                palabra == valor 
+                print(palabra)
+                
+            
 
-        print(secretword)
+      
+        
+        return palabra
 
-def procesar_letra(letra, palabra, tablero, letras_erroneas):
-    if letra in palabra:
-        print('¡Genial! Has acertado una letra.')
-        hiddenword(letra, palabra, tablero)
-    else:
-        print('¡Oh! Has fallado.')
-        letras_erroneas.append(letra)
-
-
-def hiddenword(letra, palabra, tablero):
-    for indice, letra_palabra in enumerate(palabra):
-        if letra == letra_palabra:
-            tablero[indice] = letra
-
-   
-
+        
 
 
 def read():
@@ -54,8 +52,9 @@ def read():
                 print(secretword)
 
                 letra = str(input("Ingresa una letra/vocal:"))
-                word(letra,secretword)
+                palabra = word(letra,secretword)
                 
+                print(palabra)
               
  
 
